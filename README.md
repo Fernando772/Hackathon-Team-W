@@ -1,2 +1,0 @@
-# Hackathon-Team-W
-Hackathon
