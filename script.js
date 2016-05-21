@@ -5,12 +5,7 @@ var ctx = canvas.getContext("2d");
 var middleX = canvas.width/2,
 middleY = canvas.height/2;
 
-var pattern = new Image();
-pattern.src = "Images/zebra.jpeg";
-pattern.onload = function(){
-    ctx.drawImage(pattern,50,50);
 
-}
 var skincolor = "yellow";
 var shirts = [];
 var mouths = [mouth];
@@ -40,8 +35,13 @@ var body = {
     sizeX:160,
     sizeY:200,
     draw: function(){
-    ctx.fillStyle = "red";
-    ctx.fillRect(this.posX,this.posY,this.sizeX,this.sizeY); 
+        
+    var pattern = document.getElementById('zeb');
+    var pat = ctx.createPattern(pattern,"repeat");
+    ctx.rect(this.posX,this.posY,this.sizeX,this.sizeY);
+    ctx.fillStyle = pat;
+    ctx.fill();
+
     },
 };
 
@@ -96,7 +96,19 @@ var unhappy ={
         
     },
 }
- 
+ var pupils ={
+     posY:middleY - 163,
+     posX:middleX - 33,
+     sizeX: 5,
+     sizeY: 5,
+     xsizeX: 5,
+     xsizeY: 5,
+     draw:function(){
+         ctx.fillStyle = "black";
+         ctx.fillRect(this.posX,this.posY,this.sizeX,this.sizeY);
+         ctx.fillRect()
+     }
+ }
  var neutral ={
      posY:middleY - 120,
      posX:middleX - 22,
@@ -117,9 +129,14 @@ var arms = {
     sizeY: 150,
     draw: function(){
 
-    ctx.fillStyle = "orange";
-    ctx.fillRect(this.lposX,this.lposY,this.sizeX,this.sizeY);
-    ctx.fillRect(this.rposX,this.rposY,this.sizeX,this.sizeY);
+
+    var pattern = document.getElementById('zeb');
+    var pat = ctx.createPattern(pattern,"repeat");
+    ctx.rect(this.lposX,this.lposY,this.sizeX,this.sizeY);
+    ctx.rect(this.rposX,this.rposY,this.sizeX,this.sizeY);
+    ctx.fillStyle = pat;
+    ctx.fill();
+    
     
     
     },
@@ -155,23 +172,26 @@ var feet = {
     sizeX: 70,
     sizeY: 200,
     draw: function(){
-    ctx.fillStyle = "green";
-    ctx.fillRect(this.lposX,this.lposY,this.sizeX,this.sizeY);
-    ctx.fillRect(this.rposX,this.rposY,this.sizeX,this.sizeY);
+    var pattern = document.getElementById('zeb');
+    var pat = ctx.createPattern(pattern,"repeat");
+    ctx.rect(this.lposX,this.lposY,this.sizeX,this.sizeY/2);
+    ctx.rect(this.rposX,this.rposY,this.sizeX,this.sizeY/2);
+    ctx.fillStyle = pat;
+    ctx.fill();
+    
+    ctx.fillStyle = skincolor;
+    ctx.fillRect(this.lposX,this.lposY + this.sizeX,this.sizeX,this.sizeY/2);
+    ctx.fillRect(this.rposX,this.rposY + this.sizeX,this.sizeX,this.sizeY/2);
     },
 }
 
-var shoes = {
-    lposX: middleY + 200,
-    lposY: canvas.height,
 
-};
 
 
 render();
 
 function render(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
+
 head.draw();
 body.draw();
 arms.draw();
@@ -179,6 +199,7 @@ feet.draw();
 eyes.draw();
 hands.draw();
 neutral.draw();
+pupils.draw();
 requestAnimationFrame(render);
 }
 
@@ -187,22 +208,18 @@ var sadEyeBrows = {
     posX:,
     posY:,
 }*/
-var backgrounds=["http://traveldealslady.com/wp-content/uploads/Grand-Canal-Venice-Italy-vacation-trips-travel-agent1.jpg",
-"https://i.ytimg.com/vi/5_vP6dZIPCw/maxresdefault.jpg",
-"http://www.aum.my/html/images/brands/jr/ioi/1.jpg",
-"https://media.timeout.com/images/100589813/image.jpg",
-"http://www.atlantisbahamas.com/media/Things%20To%20Do/Water%20Park/Beaches/Hero/WaterPark_Beaches.jpg"];
- //$(".imgages").click(function(){
- //var idxstring= $(this).data("idx");
- //$("body").css("background-image",);
-// });
-/*
-$()
 
 
 
 
-*/
 
-
+   
 });
+
+
+
+
+
+
+
+
