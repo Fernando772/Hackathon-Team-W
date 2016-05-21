@@ -214,6 +214,7 @@ if(shirt === 'Banana'){
     body.draw(pattBan);
     arms.draw(pattBan);
 }
+
 if (face === 'happy') {
     mouth.draw()
 }
@@ -221,8 +222,10 @@ if (face === 'sad'){
     unhappy.draw();
 }
 feet.draw();
-//pupils.draw();
+pupils.draw();
+
 requestAnimationFrame(render);
+
 }
 
 /*
