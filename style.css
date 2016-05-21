@@ -10,6 +10,9 @@ body{
     padding:0;
     margin:0px;
     background-color:#555 !important;
+    background-image: url(http://traveldealslady.com/wp-content/uploads/Grand-Canal-Venice-Italy-vacation-trips-travel-agent1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto ;
 }
 
 h1{

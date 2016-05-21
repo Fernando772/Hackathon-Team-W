@@ -12,9 +12,9 @@ var pattZeb = document.getElementById('zeb');
 var pattBan = document.getElementById('banana');
 var pattFlo = document.getElementById('flower');
 
+var foot = "jeans";
 var shirt = "Zebra";
 var skincolor = "#DFBB97";
-var shirts = [pattZeb,pattBan,pattFlo];
 var bottoms = [];
 var shoes = [];
 var face = 'happy';
@@ -41,9 +41,9 @@ var body = {
     posY:middleY - 100,
     sizeX:160,
     sizeY:200,
-    draw: function(){
+    draw: function(pattern){
         
-    var pat = ctx.createPattern(shirts[2],"repeat");
+    pat = ctx.createPattern(pattern,"repeat");
     ctx.rect(this.posX,this.posY,this.sizeX,this.sizeY);
     ctx.fillStyle = pat;
     ctx.fill();
@@ -130,11 +130,11 @@ var arms = {
     rposY: middleY - 100,
     sizeX: 50,
     sizeY: 150,
-    draw: function(){
+    draw: function(pattern){
 
 
     
-    pat = ctx.createPattern(shirts[0],"repeat");
+    pat = ctx.createPattern(pattern,"repeat");
     ctx.rect(this.lposX,this.lposY,this.sizeX,this.sizeY);
     ctx.rect(this.rposX,this.rposY,this.sizeX,this.sizeY);
     ctx.fillStyle = pat;
@@ -176,7 +176,7 @@ var feet = {
     sizeX: 70,
     sizeY: 200,
     draw: function(){
-    var pattern = document.getElementById('zeb');
+    var pattern = document.getElementById(foot);
     var pat = ctx.createPattern(pattern,"repeat");
     ctx.rect(this.lposX,this.lposY,this.sizeX,this.sizeY/2);
     ctx.rect(this.rposX,this.rposY,this.sizeX,this.sizeY/2);
@@ -198,21 +198,29 @@ render();
 function render(){
 ctx.clearRect(0,0,canvas.width,canvas.height);
 head.draw();
-body.draw();
-arms.draw();
-feet.draw();
+
 eyes.draw();
 hands.draw();
 
-
-
+if(shirt === 'Zebra'){
+    body.draw(pattZeb);
+    arms.draw(pattZeb);
+}
+if(shirt === 'Flower'){
+    body.draw(pattFlo);
+    arms.draw(pattFlo);
+}
+if(shirt === 'Banana'){
+    body.draw(pattBan);
+    arms.draw(pattBan);
+}
 if (face === 'happy') {
     mouth.draw()
 }
 if (face === 'sad'){
     unhappy.draw();
 }
-
+feet.draw();
 //pupils.draw();
 requestAnimationFrame(render);
 }
@@ -240,19 +248,19 @@ var sadEyeBrows = {
         var idxstring= $(this).data("idx");
     
         $("body").css("background-image","url("+backgrounds[idxstring]+")");
-        $
+        
     });
     
     $('.face').on('click', function() {
         face = $(this).data('face');
 
-    })
+    });
     $('.shirt').on('click',function(){
         shirt = $(this).data('shirt');
     
     });
  $('.pants').on('click', function(){
-     pat = $(this).data('pants');
+     foot = $(this).data('pants');
  })
 });
 
