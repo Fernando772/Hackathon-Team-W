@@ -5,53 +5,152 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script type="text/javascript" src="jquery-2.2.4.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         
     </head>
     <body>
-        <select id="hair">
-            <option>Blonde</option>
-            <option>Brunette</option>
-            <option>Black</option>
-        </select>
-        <select>
-            <button id="shoes">Shoes</button>
-            
-        </select>
-        
-        <select id="pants">
-            <options></options>
-        </select>
-        <button id=""></button>
         <h1></h1>
         <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                  instructions
+                </button>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">title</div>
+        </div>
+        <div class="row">
             <div class="col-md-3">
-                <Select>
-                    <Option>Male</Option>
-                    <option>Female</option>
-                </Select>
+                <!-- Dropdown begins -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Gender
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        
+                        <li><a href="#">Male</a></li>
+                        <li><a herf="#">Female</a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+                <!-- Dropdown begins -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        backgrounds
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">venice</a></li>
+                        <li><a href="#">concert</a></li>
+                        <li><a herf="#">Johnny Rockets</a></li>
+                        <li><a herf="#">Time Square</a></li>
+                        <li><a herf="#">beach</a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+                <!-- Dropdown begins -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Face
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        
+                        <li><a href="#">Happy</a></li>
+                        <li><a herf="#">Sad</a></li>
+                        <li><a herf="#">Normal</a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+                
+                
+                
                 
             </div>
             <div class="col-md-6">
-            
-            
+                <canvas id="canvas" width="500px" height="500px"></canvas>
             </div>
             <div class="col-md-3">
-                 <select id="hair">
-            <option>Blonde</option>
-            <option>Brunette</option>
-            <option>Black</option>
-        </select>
-        <select>
-            <select id="shoes">footwear</select>
-            <option>sneakers</option>
-            <option>shoes</option>
+                <!-- Dropdown begins -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Hair
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        
+                        <li><a href="#">Blonde</a></li>
+                        <li><a herf="#">Brunette</a></li>
+                        <li><a herf="#">Black</a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+                 <!-- Dropdown begins -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Footwear
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        
+                        <li><a href="#">Shoes</a></li>
+                        <li><a herf="#">sandals</a></li>
+                        <li><a herf="#"></a>Sneakers</li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+               <!-- Dropdown begins -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Pants
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu Shoes"  aria-labelledby="dropdownMenu1">
+                        
+                        <li><a href="#">Jeans</a></li>
+                        <li><a herf="#">Shorts</a></li>
+                        <li><a herf="#">Sweats</a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
             
-            
-        
-        <select id="pants">
-            <options></options>
-        </select>
-        <button id=""></button>
+                <!-- Dropdown begins -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Top
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        
+                        <li><a href="#"></a></li>
+                        <li><a herf="#"></a></li>
+                        <li><a herf="#"></a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+               </select>
                 
             </div>
             
