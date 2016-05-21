@@ -10,8 +10,8 @@ $(document).ready(function(){
         
         var idxstring= $(this).data("idx");
         alert(idxstring);
-        $("body").css("background-image",() backgrounds[idxstring]);
-        console.log($('body').css("background-image'));
+        $("body").css("background-image","url("+backgrounds[idxstring]+")");
+    
     });
     
     

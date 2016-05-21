@@ -99,6 +99,8 @@ var unhappy ={
  var pupils ={
      posY:middleY - 163,
      posX:middleX - 33,
+     xposY:middleY - 160,
+     xposX:middleX - -20,
      sizeX: 5,
      sizeY: 5,
      xsizeX: 5,
@@ -106,7 +108,7 @@ var unhappy ={
      draw:function(){
          ctx.fillStyle = "black";
          ctx.fillRect(this.posX,this.posY,this.sizeX,this.sizeY);
-         ctx.fillRect()
+         ctx.fillRect(this.xposX,this.xposY,this.xsizeX,this.xsizeY)
      }
  }
  var neutral ={
