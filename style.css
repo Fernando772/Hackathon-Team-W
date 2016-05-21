@@ -13,10 +13,10 @@ body{
 }
 
 h1{
-  color: white !important;
-  font-family:Nova;
+  color: white!important;
+  font-family:Nova !important;
+  font-weight:bold !important;
 }
-
 
 
 

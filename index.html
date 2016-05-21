@@ -7,9 +7,15 @@
         <script type="text/javascript" src="jquery-2.2.4.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
+     <img id="flower" src="Images/shirt_flower.jpg" width=".05px" height=".05px"></img>
+    <img id="zeb" src="Images/shirt_zebra.jpg" width=".05px" height=".05px"></img>
+    <img id="banana" src="Images/shirt_banana.jpg" width=".05px" height=".05px"></img>
+        <img id="velvet" src="Images/pants_velvet.jpg" width="0.5px" height=".05px"></img>      
+        <img id="leopard" src="Images/pants_leopard.jpg" width="0.5px" height=".05px"></img>
+        <img id="jeans" src="Images/pants_jeans.jpg" width="0.5px" height="0.5px"></img>
         <h1></h1>
         <div class="row">
             <div class="col-md-10"></div>
@@ -49,29 +55,28 @@
                 <!-- Dropdown begins -->
                 <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Backgrounds
+                        Locations &#127753;
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#" class="images" data-idx="0" >Venice</a></li>
-                        <li><a href="#" class="images" data-idx="1">Concert</a></li>
-                        <li><a herf="#" class="images" data-idx="2">Johnny Rockets</a></li>
-                        <li><a herf="#" class="images" data-idx="3">Time Square</a></li>
-                        <li><a herf="#" class="images" data-idx="4">Beach</a></li>
+                        <li><a href="#" class="bg-images" data-idx="0" >Venice</a></li>
+                        <li><a href="#" class="bg-images" data-idx="1">Concert</a></li>
+                        <li><a herf="#" class="bg-images" data-idx="2">Johnny Rockets</a></li>
+                        <li><a herf="#" class="bg-images" data-idx="3">Time Square</a></li>
+                        <li><a herf="#" class="bg-images" data-idx="4">Beach</a></li>
                     </ul>
                 </div>
                 <!-- Dropdown ends -->
                 <!-- Dropdown begins -->
                 <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Face
+                        Face &#128566;
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         
-                        <li><a href="#">Happy</a></li>
-                        <li><a herf="#">Sad</a></li>
-                        <li><a herf="#">Normal</a></li>
+                        <li><a class="face" data-face="happy" href="#">Happy</a></li>
+                        <li><a class="face" data-face="sad" href="#">Sad</a></li>
                     </ul>
                 </div>
                 <!-- Dropdown ends -->
@@ -87,7 +92,7 @@
                <!-- Dropdown begins -->
                 <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Skin Tone
+                        Skin Tone &#127912;
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu Skin-tone" aria-labelledby="dropdownMenu1">
@@ -101,14 +106,14 @@
                <!-- Dropdown begins -->
                 <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Pants
+                        Pants &#128086;
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu Shoes"  aria-labelledby="dropdownMenu1">
                         
-                        <li><a href="#">Jeans</a></li>
-                        <li><a herf="#">Shorts</a></li>
-                        <li><a herf="#">Sweats</a></li>
+                        <li class="pants" data-pants="Jeans"><a href="#">Jeans</a></li>
+                        <li class="pants" data-pants="Leopard"><a herf="#">Leopard</a></li>
+                        <li class="pants" data-pants="Velvet"><a herf="#">Velvet</a></li>
                     </ul>
                 </div>
                 <!-- Dropdown ends -->
@@ -116,14 +121,14 @@
                 <!-- Dropdown begins -->
                 <div class="dropdown">
                     <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Top
+                        Top &#128085;
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         
-                        <li><a href="#">Animal print</a></li>
-                        <li><a herf="#">Stripe</a></li>
-                        <li><a herf="#"></a></li>
+                        <li><a class="shirt" data-shirt="Zebra" href="#">Zebra</a></li>
+                        <li><a class="shirt" data-shirt="Flower" herf="#">Flower</a></li>
+                        <li><a class="shirt" data-shirt="Banana" herf="#">Banana</a></li>
                     </ul>
                 </div>
                 <!-- Dropdown ends -->

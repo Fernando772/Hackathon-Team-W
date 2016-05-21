@@ -6,17 +6,17 @@ $(document).ready(function(){
                      "http://www.aum.my/html/images/brands/jr/ioi/1.jpg",
                      "https://media.timeout.com/images/100589813/image.jpg",
                      "http://www.atlantisbahamas.com/media/Things%20To%20Do/Water%20Park/Beaches/Hero/WaterPark_Beaches.jpg"];
-    $(".images").click(function(){
+    $(".bg-images").click(function(){
         
         var idxstring= $(this).data("idx");
-        alert(idxstring);
+    
         $("body").css("background-image","url("+backgrounds[idxstring]+")");
     
     });
     
     
     $(".Skin-tone li").on("click", function(){
-    $(this).data("color")
+    $(this).data("color");
 
    
 });
