@@ -6,7 +6,8 @@ var middleX = canvas.width/2,
 middleY = canvas.height/2;
 
 var skincolor = "yellow";
-var shirts = []
+var shirts = [];
+var bottoms = [];
 var shoes = [];
 //head 
 
@@ -48,14 +49,16 @@ var eyes = {
     posY:middleY - 170,
     tposX:middleX - 40,
     tposY:middleY - 170,
-    sposX:middleX ,
-    sposX:middleX ,
     sizeX: 20,
     sizeY: 20,
+    xsizeX:10,
+    xsizeY:10,
     draw: function() {
         ctx.fillStyle = "white";
         ctx.fillRect(this.posX,this.posY,this.sizeX,this.sizeY);
         ctx.fillRect(this.tposX,this.tposY,this.sizeX,this.sizeY);
+        
+        
     },
 }
 
@@ -64,10 +67,14 @@ var mouth ={
     posY:middleY - 130,
     sizeX: 20,
     sizeY: 0,
+    zsizeX: 20,
+    zsizeY: 0,
     draw: function() {
         ctx.strokeStyle = "cyan";
-        ctx.arc(this.posX,this.posY,this.sizeX,this.sizeY,Math.PI/1);
+        //ctx.arc(this.posX,this.posY,this.sizeX,this.sizeY,Math.PI/1);
         ctx.linewidth = 10;
+        ctx.strokeStyle = "black";
+        ctx.arc(this.posX,this.posY,this.zsizeX,this.zsizeY,Math.PI/1);
         ctx.stroke();
     }
 }
@@ -126,7 +133,11 @@ var feet = {
     },
 }
 
+var shoes = {
+    lposX: middleY + 200,
+    lposY: canvas.height,
 
+};
 
 
 render();
@@ -153,6 +164,7 @@ var backgrounds=["http://traveldealslady.com/wp-content/uploads/Grand-Canal-Veni
 "http://www.aum.my/html/images/brands/jr/ioi/1.jpg",
 "https://media.timeout.com/images/100589813/image.jpg",
 "http://www.atlantisbahamas.com/media/Things%20To%20Do/Water%20Park/Beaches/Hero/WaterPark_Beaches.jpg"];
- 
+ // We are working! sorry $(".imgages").click(function(){
+// });
 
 });
